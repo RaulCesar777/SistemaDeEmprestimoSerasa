@@ -9,9 +9,7 @@ public class Client {
 	private String birthDate;
 	private double salary1;
 	private double salary2;
-	private double salary3;
-	
-    
+	private double salary3;    
 	private double averageWage;
 	private String financialHealth;
 	
