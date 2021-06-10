@@ -118,8 +118,16 @@ public class Client {
 
 	@Override
 	public String toString() {
-		return "Client [fullName=" + fullName + ", CPF=" + CPF + ", RG=" + RG + ", birthDate=" + birthDate
-				+ ", getAverageWage()=" + getAverageWage() + ", getFinancialHealth()=" + getFinancialHealth() + "]";
+		return "Nome Completo :" + fullName +"\n"
+				+"CPF :" + CPF + "\n"
+				+"RG :" + RG + "\n" 
+				+"Data de Aniversario :" + birthDate +"\n" 
+				+"Media dos 3 ultimos salarios : R$ " + String.format("%.2f",getAverageWage()) + "\n" 
+				+"Classificação do cliente :" +  getFinancialHealth();
+	}
+
+	public void setAverageWage(double averageWage) {
+		this.averageWage = getAverageWage();
 	}
 
 	
