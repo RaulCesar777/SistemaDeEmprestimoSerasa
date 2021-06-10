@@ -10,14 +10,10 @@ public class Client {
 	private double salary1;
 	private double salary2;
 	private double salary3;
-    private double averageWage;
 	
-	
-
-
-
-
-	String financialHealth;
+    
+	private double averageWage;
+	private String financialHealth;
 	
 	
 
@@ -77,44 +73,21 @@ public class Client {
 		this.salary3 = salary3;
 	}
 
+	
 	public double getAverageWage() {
+		double average= this.averageWage;
+		average = (salary1 + salary2 +salary3)/3;
+		return average;
+	}
+
+	public void setAverageWage(double averageWage) {
 		
-		return (salary1 + salary2 + salary3)/3;
+		this.averageWage = averageWage;
 	}
 
 	
 
-	public String getFinancialHealth() {
-
-		double health = this.getAverageWage(); 
-		
-		if (health <= 500) {
-			
-			return "Client Class F";
-			
-		}else if (health <= 2000) {
-			
-			return "Client Class E";
-			
-		}else if (health <= 6000) {
-			
-			return "Client Class D";
-			
-		}else if (health <= 10000) {
-			
-			return "Client Class C";
-		}else if (health <= 18000) {
-			
-			return "Client Class B";
-		}else if (health >= 25000) {
-			
-			return "Client Class A";
-		}else {
-			return "empty";
-		}
-		
 	
-	}
 
 	@Override
 	public String toString() {
@@ -126,9 +99,45 @@ public class Client {
 				+"Classificação do cliente :" +  getFinancialHealth();
 	}
 
-	public void setAverageWage(double averageWage) {
-		this.averageWage = getAverageWage();
+	public String getFinancialHealth() {
+		
+			double health = this.getAverageWage(); 
+			String FinancialHealth =this.financialHealth;
+			
+			if (health <= 500) {
+				
+				FinancialHealth= "Client Class F";
+				
+			}else if (health <= 2000) {
+				
+				FinancialHealth="Client Class E";
+				
+			}else if (health <= 6000) {
+				
+				FinancialHealth="Client Class D";
+				
+			}else if (health <= 10000) {
+				
+				FinancialHealth= "Client Class C";
+			}else if (health <= 18000) {
+				
+				FinancialHealth="Client Class B";
+			}else{
+				
+				FinancialHealth= "Client Class A";
+			}
+			
+			return FinancialHealth;
 	}
+
+	public void setFinancialHealth(String Health) {
+		this.financialHealth = Health;
+	}
+
+	
+	
+
+	
 
 	
 	
