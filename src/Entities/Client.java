@@ -3,16 +3,20 @@ package Entities;
 public class Client {
 	
 	
-	String fullName;
-	String CPF;
-	String RG;
-	String birthDate;
-	double salary1;
-	double salary2;
-	double salary3;
-	double averageWage;
+	private String fullName;
+	private String CPF;
+	private String RG;
+	private String birthDate;
+	private double salary1;
+	private double salary2;
+	private double salary3;
+    private double averageWage;
 	
 	
+
+
+
+
 	String financialHealth;
 	
 	
@@ -112,6 +116,13 @@ public class Client {
 	
 	}
 
+	@Override
+	public String toString() {
+		return "Client [fullName=" + fullName + ", CPF=" + CPF + ", RG=" + RG + ", birthDate=" + birthDate
+				+ ", getAverageWage()=" + getAverageWage() + ", getFinancialHealth()=" + getFinancialHealth() + "]";
+	}
+
+	
 	
 	
 	
