@@ -12,6 +12,9 @@ public class Program {
 		
 		Client client = new Client();
 		
+		
+		menu.wellcome();
+		
 		String FullName;
 		String CPF;
 		String RG;
