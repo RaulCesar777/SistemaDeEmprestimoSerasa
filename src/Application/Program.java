@@ -1,10 +1,16 @@
 package Application;
 
+import Entities.Client;
+
 public class Program {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		
+		
+		Client client = new Client();
+		
+		
+		
 	}
 
 }
