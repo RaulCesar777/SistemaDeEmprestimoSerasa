@@ -1,19 +1,16 @@
-package Entities;
+package Application;
 
 public class Client {
-	
-	
+
 	private String fullName;
 	private String CPF;
 	private String RG;
 	private String birthDate;
 	private double salary1;
 	private double salary2;
-	private double salary3;    
+	private double salary3;
 	private double averageWage;
 	private String financialHealth;
-	
-	
 
 	public String getFullName() {
 		return fullName;
@@ -71,22 +68,55 @@ public class Client {
 		this.salary3 = salary3;
 	}
 
-	
 	public double getAverageWage() {
-		double average= this.averageWage;
-		average = (salary1 + salary2 +salary3)/3;
+		double average = this.averageWage;
+		average = (salary1 + salary2 + salary3) / 3;
 		return average;
 	}
 
 	public void setAverageWage(double averageWage) {
-		
+
 		this.averageWage = averageWage;
 	}
 
-	
+
+
+	public String getFinancialHealth() {
+
+		double health = this.getAverageWage();
+		String FinancialHealth = this.financialHealth;
+
+		if (health <= 500) {
+
+			FinancialHealth = "Client Class F";
+
+		} else if (health <= 2000) {
+
+			FinancialHealth = "Client Class E";
+
+		} else if (health <= 6000) {
+
+			FinancialHealth = "Client Class D";
+
+		} else if (health <= 10000) {
+
+			FinancialHealth = "Client Class C";
+		} else if (health <= 18000) {
+
+			FinancialHealth = "Client Class B";
+		} else {
+
+			FinancialHealth = "Client Class A";
+		}
+
+		return FinancialHealth;
+	}
+
+	public void setFinancialHealth(String Health) {
+		this.financialHealth = Health;
+	}
 
 	
-
 	@Override
 	public String toString() {
 		return "Nome Completo :" + fullName +"\n"
@@ -96,51 +126,6 @@ public class Client {
 				+"Media dos 3 ultimos salarios : R$ " + String.format("%.2f",getAverageWage()) + "\n" 
 				+"Classificação do cliente :" +  getFinancialHealth();
 	}
-
-	public String getFinancialHealth() {
-		
-			double health = this.getAverageWage(); 
-			String FinancialHealth =this.financialHealth;
-			
-			if (health <= 500) {
-				
-				FinancialHealth= "Client Class F";
-				
-			}else if (health <= 2000) {
-				
-				FinancialHealth="Client Class E";
-				
-			}else if (health <= 6000) {
-				
-				FinancialHealth="Client Class D";
-				
-			}else if (health <= 10000) {
-				
-				FinancialHealth= "Client Class C";
-			}else if (health <= 18000) {
-				
-				FinancialHealth="Client Class B";
-			}else{
-				
-				FinancialHealth= "Client Class A";
-			}
-			
-			return FinancialHealth;
-	}
-
-	public void setFinancialHealth(String Health) {
-		this.financialHealth = Health;
-	}
-
 	
 	
-
-	
-
-	
-	
-	
-	
-	
-
 }

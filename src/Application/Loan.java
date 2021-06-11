@@ -1,4 +1,4 @@
-package Entities;
+package Application;
 
 public class Loan {
 	//classe emprestimo
